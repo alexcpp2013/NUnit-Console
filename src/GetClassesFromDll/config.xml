@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<config>
+  <!-- dll for run -->
+  <path-dll>C:\Tests.dll</path-dll>
+  <!-- NUNIT (console, GUI) -->
+  <path-nunit>C:\Program Files\NUnit 2.6.2\bin\nunit-console-x86.exe</path-nunit>
+  <!-- result file xsl -->
+  <path-xsl>TestResult.xsl</path-xsl>
+  <!-- result file xml -->
+  <name-xml>test-results</name-xml>
+  <!-- some options --> 
+  <option></option>
+</config>
