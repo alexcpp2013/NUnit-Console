@@ -18,13 +18,19 @@ namespace GetClassesFromDll
                 
                 Assembly asm = Assembly.LoadFrom(filename);
 
-                var allTypes = 
+                var allTypes =
                     asm.GetTypes().Where(type => Attribute.IsDefined(type, typeof(System.Attribute)));
 
                 foreach (var t in allTypes)
                 {
-                    if (t.Name != "TestStatus")
+                    /*if (t.Name != "TestStatus")
                         className = t.FullName;
+                    else
+                        continue;*/
+
+                    if (t.Name != className)
+                        continue;
+                    className = t.FullName;
 
                     var methods = 
                         t.GetMethods().

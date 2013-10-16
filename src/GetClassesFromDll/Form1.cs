@@ -30,8 +30,8 @@ namespace GetClassesFromDll
     public partial class Form1 : Form
     {
         private List<string> list = new List<string>();
-        private string className = "";
-        private const string resultName = "TestResult.xml";
+        private string className = "FirstSeleniumTest";
+        private string resultName = "TestResult.xml";
         private string resultNewName = "";
         private const string config = "config.xml";
 
@@ -62,6 +62,31 @@ namespace GetClassesFromDll
                     "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            /*Thread.Sleep(100);
+            try
+            {
+                string options = "";
+
+                options = MakeNUnitOptions(ref options);
+
+                string strOld;
+                string strPattern;
+                MakeXSLRule(out strOld, out strPattern);
+
+                DeleteOldResult();
+
+                RunNUnit(options);
+
+                CreateResultFile(strOld, strPattern);
+
+                OpenResultFile();
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Во время запуска тестов произошла ошибка.\n" + err.Message,
+                    "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }*/
 
             int tmp = await Task<int>.Run(() =>
                 {
@@ -202,7 +227,7 @@ namespace GetClassesFromDll
         private void ClearInputData()
         {
             list.Clear();
-            className = "";
+            //className = "";
         }
 
         private void ClearGUIData()
@@ -260,7 +285,7 @@ namespace GetClassesFromDll
             //Атрибут для идентификации сборки dll для загрузки
             string dll = "path-dll";
             //Атрибут для имени файла с результатами XML
-            string xml = "name-xml";
+            string xml = "name-xml";      
 
             if (tbConfig.Text != "")
             {
