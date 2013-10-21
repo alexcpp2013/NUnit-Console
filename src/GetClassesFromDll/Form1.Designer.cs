@@ -65,6 +65,8 @@
             this.helpToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ofdOpenSavedFile = new System.Windows.Forms.OpenFileDialog();
             this.ProgressBar = new System.Windows.Forms.ProgressBar();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,7 +77,7 @@
             // btCloseForm
             // 
             this.btCloseForm.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btCloseForm.Location = new System.Drawing.Point(715, 527);
+            this.btCloseForm.Location = new System.Drawing.Point(715, 591);
             this.btCloseForm.Name = "btCloseForm";
             this.btCloseForm.Size = new System.Drawing.Size(75, 23);
             this.btCloseForm.TabIndex = 0;
@@ -92,7 +94,7 @@
             this.groupBox1.Controls.Add(this.btSubmit);
             this.groupBox1.Location = new System.Drawing.Point(264, 36);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(526, 468);
+            this.groupBox1.Size = new System.Drawing.Size(526, 549);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Загрузка и исполнение тестов";
@@ -100,7 +102,7 @@
             // button1
             // 
             this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(241, 431);
+            this.button1.Location = new System.Drawing.Point(241, 517);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 19;
@@ -114,7 +116,7 @@
             this.groupBox4.Controls.Add(this.btDefault);
             this.groupBox4.Controls.Add(this.tbConfig);
             this.groupBox4.Controls.Add(this.btConfig);
-            this.groupBox4.Location = new System.Drawing.Point(7, 247);
+            this.groupBox4.Location = new System.Drawing.Point(7, 346);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(509, 143);
             this.groupBox4.TabIndex = 18;
@@ -160,6 +162,8 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.comboBox1);
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Controls.Add(this.btDll);
             this.groupBox3.Controls.Add(this.tbdll);
@@ -171,7 +175,7 @@
             this.groupBox3.Controls.Add(this.tbXSL);
             this.groupBox3.Location = new System.Drawing.Point(7, 20);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(509, 221);
+            this.groupBox3.Size = new System.Drawing.Size(509, 320);
             this.groupBox3.TabIndex = 16;
             this.groupBox3.TabStop = false;
             // 
@@ -205,7 +209,7 @@
             // 
             // btNUnit
             // 
-            this.btNUnit.Location = new System.Drawing.Point(418, 113);
+            this.btNUnit.Location = new System.Drawing.Point(418, 177);
             this.btNUnit.Name = "btNUnit";
             this.btNUnit.Size = new System.Drawing.Size(75, 23);
             this.btNUnit.TabIndex = 3;
@@ -216,7 +220,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 89);
+            this.label2.Location = new System.Drawing.Point(9, 153);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 11;
@@ -225,7 +229,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(5, 160);
+            this.label3.Location = new System.Drawing.Point(5, 236);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(290, 13);
             this.label3.TabIndex = 12;
@@ -233,7 +237,7 @@
             // 
             // tbNUnit
             // 
-            this.tbNUnit.Location = new System.Drawing.Point(9, 116);
+            this.tbNUnit.Location = new System.Drawing.Point(9, 180);
             this.tbNUnit.Name = "tbNUnit";
             this.tbNUnit.ReadOnly = true;
             this.tbNUnit.Size = new System.Drawing.Size(394, 20);
@@ -241,7 +245,7 @@
             // 
             // btXSL
             // 
-            this.btXSL.Location = new System.Drawing.Point(417, 184);
+            this.btXSL.Location = new System.Drawing.Point(417, 260);
             this.btXSL.Name = "btXSL";
             this.btXSL.Size = new System.Drawing.Size(75, 23);
             this.btXSL.TabIndex = 5;
@@ -251,7 +255,7 @@
             // 
             // tbXSL
             // 
-            this.tbXSL.Location = new System.Drawing.Point(8, 187);
+            this.tbXSL.Location = new System.Drawing.Point(8, 263);
             this.tbXSL.Name = "tbXSL";
             this.tbXSL.ReadOnly = true;
             this.tbXSL.Size = new System.Drawing.Size(394, 20);
@@ -260,7 +264,7 @@
             // btWatch
             // 
             this.btWatch.Enabled = false;
-            this.btWatch.Location = new System.Drawing.Point(120, 431);
+            this.btWatch.Location = new System.Drawing.Point(120, 517);
             this.btWatch.Name = "btWatch";
             this.btWatch.Size = new System.Drawing.Size(75, 23);
             this.btWatch.TabIndex = 9;
@@ -271,7 +275,7 @@
             // btSubmit
             // 
             this.btSubmit.Enabled = false;
-            this.btSubmit.Location = new System.Drawing.Point(6, 431);
+            this.btSubmit.Location = new System.Drawing.Point(6, 517);
             this.btSubmit.Name = "btSubmit";
             this.btSubmit.Size = new System.Drawing.Size(75, 23);
             this.btSubmit.TabIndex = 0;
@@ -286,14 +290,14 @@
             this.groupBox2.Controls.Add(this.cblbTree);
             this.groupBox2.Location = new System.Drawing.Point(12, 36);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(233, 468);
+            this.groupBox2.Size = new System.Drawing.Size(233, 550);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Дерево тестов";
             // 
             // btClearChecked
             // 
-            this.btClearChecked.Location = new System.Drawing.Point(152, 431);
+            this.btClearChecked.Location = new System.Drawing.Point(152, 516);
             this.btClearChecked.Name = "btClearChecked";
             this.btClearChecked.Size = new System.Drawing.Size(75, 23);
             this.btClearChecked.TabIndex = 16;
@@ -303,7 +307,7 @@
             // 
             // btCheckedAll
             // 
-            this.btCheckedAll.Location = new System.Drawing.Point(6, 431);
+            this.btCheckedAll.Location = new System.Drawing.Point(6, 516);
             this.btCheckedAll.Name = "btCheckedAll";
             this.btCheckedAll.Size = new System.Drawing.Size(75, 23);
             this.btCheckedAll.TabIndex = 15;
@@ -318,7 +322,7 @@
             this.cblbTree.FormattingEnabled = true;
             this.cblbTree.Location = new System.Drawing.Point(3, 16);
             this.cblbTree.Name = "cblbTree";
-            this.cblbTree.Size = new System.Drawing.Size(227, 382);
+            this.cblbTree.Size = new System.Drawing.Size(227, 472);
             this.cblbTree.TabIndex = 14;
             // 
             // ofdDll
@@ -401,7 +405,7 @@
             // 
             // ProgressBar
             // 
-            this.ProgressBar.Location = new System.Drawing.Point(12, 528);
+            this.ProgressBar.Location = new System.Drawing.Point(12, 592);
             this.ProgressBar.MarqueeAnimationSpeed = 10;
             this.ProgressBar.Maximum = 25;
             this.ProgressBar.Name = "ProgressBar";
@@ -411,6 +415,24 @@
             this.ProgressBar.TabIndex = 5;
             this.ProgressBar.Visible = false;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(113, 82);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(289, 21);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(12, 85);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(68, 13);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Имя класса";
+            // 
             // Form1
             // 
             this.AcceptButton = this.btSubmit;
@@ -418,7 +440,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.CancelButton = this.btCloseForm;
-            this.ClientSize = new System.Drawing.Size(801, 561);
+            this.ClientSize = new System.Drawing.Size(801, 618);
             this.Controls.Add(this.ProgressBar);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.groupBox2);
@@ -484,6 +506,8 @@
         private System.Windows.Forms.OpenFileDialog ofdOpenSavedFile;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar ProgressBar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 

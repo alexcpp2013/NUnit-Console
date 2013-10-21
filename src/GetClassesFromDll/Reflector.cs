@@ -10,6 +10,28 @@ namespace GetClassesFromDll
 {
     class Reflector
     {
+        public void GetNamesOfClasses(string file, List<string> list)
+        {
+            try
+            {
+                list.Clear();
+
+                Assembly asm = Assembly.LoadFrom(file);
+
+                var allTypes =
+                    asm.GetTypes().Where(type => Attribute.IsDefined(type, typeof(System.Attribute)));
+
+                foreach (var t in allTypes)
+                {
+                    list.Add(t.Name);
+                }
+            }
+            catch (Exception e)
+            {
+                ;
+            }
+        }
+
         public bool GetMethods(string filename, List<string> list, ref string className)
         {
             try

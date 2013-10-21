@@ -393,9 +393,24 @@ namespace GetClassesFromDll
             //Возможно лучше вызывать makeTree в каждом методе где надо менять дерево
             if (tbdll.Text != "")
             {
-                MakeTree(tbdll.Text);
+                //MakeTree(tbdll.Text);
+                MakeNameOfClass(tbdll.Text);
                 Refresh();
             }
+        }
+
+        private void MakeNameOfClass(string file)
+        {
+            comboBox1.Items.Clear();
+            var list = new List<string>();
+            var r = new Reflector();
+            r.GetNamesOfClasses(file, list);
+            foreach (var el in list)
+            {
+                comboBox1.Items.Add(el);
+            }
+            if (comboBox1.Items.Count > 0)
+                comboBox1.SelectedIndex = 0;
         }
 
         private void newToolStripButton_Click(object sender, EventArgs e)
@@ -505,6 +520,16 @@ namespace GetClassesFromDll
                                     err.Message, "Ошибка",
                                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (tbdll.Text != "")
+            {
+                className = comboBox1.Text;
+                MakeTree(tbdll.Text);
+                Refresh();
             }
         }
     }
